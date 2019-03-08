@@ -69,7 +69,21 @@ namespace flashy_things.Controllers
             }
             return this.Ok();
         }
+        
+        // POST (delete) /api/product/id
+        [HttpPost("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult Delete(int id)
+        {
+            var result = this.productService.Delete(id);
 
+            if (!result)
+            {
+                return this.NotFound();
+            }
 
+            return this.Ok();
+        }
     }
 }

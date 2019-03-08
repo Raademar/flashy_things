@@ -35,5 +35,10 @@ namespace flashy_things.Services
 
             return true;
         }
+
+        public bool Delete(int id)
+        {
+            return this.productRepository.Delete(id);
+        }
     }
 }

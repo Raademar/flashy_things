@@ -51,5 +51,20 @@ namespace flashy_things.Repositories
                 return true;
             }
         }
+
+        public bool Delete(int id)
+        {
+            using (var connection = new MySqlConnection(this.ConnectionString))
+            {
+                var result = connection.Execute("DELETE FROM Products WHERE Id = @id", new { id });
+                
+                if (result == 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+        }
     }
 }
