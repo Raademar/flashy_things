@@ -18,5 +18,22 @@ namespace flashy_things.Services
         {
             return this.productRepository.Get();
         }
+
+        public Product Get(int id)
+        {
+            return this.productRepository.Get(id);
+        }
+
+        public bool Add(Product product)
+        {
+            var result = this.productRepository.Add(product);
+
+            if (!result)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

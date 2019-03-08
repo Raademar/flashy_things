@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/flashy_things.csproj",
+    "projectUniqueName": "C:\\Projects\\YRGO\\.NET\\flashy_things\\flashy_things\\flashy_things.csproj",
     "projectName": "flashy_things",
-    "projectPath": "/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/flashy_things.csproj",
-    "outputPath": "/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/",
+    "projectPath": "C:\\Projects\\YRGO\\.NET\\flashy_things\\flashy_things\\flashy_things.csproj",
+    "outputPath": "C:\\Projects\\YRGO\\.NET\\flashy_things\\flashy_things\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"

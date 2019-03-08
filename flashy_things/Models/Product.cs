@@ -1,12 +1,20 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace flashy_things.Models
 {
     public class Product
     {
         public int Id { get; set; }
+        [Required]
         public string Title { get; set; }
-        public string Description { get; set; } 
-        public string Image { get; set; } 
-        public string Category { get; set; } 
-        public string Stock { get; set; } 
+        [Required]
+        public string Description { get; set; }
+        [Required]
+        public string Image { get; set; }
+        [Required]
+        public int Category { get; set; }
+        [Required]
+        public int Stock { get; set; }
+        public string DateAdded { get; set; }
     }
 }
