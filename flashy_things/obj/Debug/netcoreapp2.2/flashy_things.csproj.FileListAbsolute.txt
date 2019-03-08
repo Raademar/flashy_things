@@ -1,0 +1,14 @@
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.deps.json
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.runtimeconfig.json
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.runtimeconfig.dev.json
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.dll
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.pdb
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csprojAssemblyReference.cache
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csproj.CoreCompileInputs.cache
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.RazorAssemblyInfo.cache
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.RazorAssemblyInfo.cs
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.AssemblyInfoInputs.cache
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.AssemblyInfo.cs
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.RazorTargetAssemblyInfo.cache
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.dll
+/Users/mattiasrademar/Documents/Webbutveckling/Yrgo/C#/flashy_things/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.pdb
