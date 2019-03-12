@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using flashy_things.Models;
 using flashy_things.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
 namespace flashy_things.Services
 
@@ -39,6 +40,11 @@ namespace flashy_things.Services
         public bool Delete(int id)
         {
             return this.productRepository.Delete(id);
+        }
+
+        public bool AddToCart(CartItem cartItem)
+        {
+            return this.productRepository.AddToCart(cartItem);
         }
     }
 }

@@ -1,13 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Dapper;
 using flashy_things.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 
 namespace flashy_things.Repositories
 {
-    public class ProductRepository
+    public class ProductRepository : ControllerBase
     {
         private readonly string ConnectionString;
         private readonly ProductRepository productRepository;
@@ -59,6 +62,21 @@ namespace flashy_things.Repositories
                 var result = connection.Execute("DELETE FROM Products WHERE Id = @id", new { id });
                 
                 if (result == 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+        
+        public bool AddToCart(CartItem cartItem)
+        {
+            using (var connection = new MySqlConnection(this.ConnectionString))
+            {
+                var response = connection.Execute("INSERT INTO CartItem (CartId, ProductId) VALUES (@CartId, @ProductId)", cartItem );
+                
+                if (response == 0)
                 {
                     return false;
                 }
