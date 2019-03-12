@@ -33,6 +33,7 @@
           <e p="ProductRepository.cs" t="Include" />
         </e>
         <e p="Services" t="Include">
+          <e p="CartService.cs" t="Include" />
           <e p="ProductService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />

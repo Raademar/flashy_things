@@ -16,8 +16,9 @@ namespace flashy_things.Repositories
             this.ConnectionString = ConnectionString;
         }
 
-        public List<Product> Get(int id)
+        public List<Product> Get()
         {
+            
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
                 return connection.Query<Product>("SELECT * FROM CartItem WHERE CartId = @id;", new { id }).ToList(); 
