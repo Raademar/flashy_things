@@ -19,12 +19,12 @@ namespace flashy_things.Controllers
     public class CartController : ControllerBase
     {
         private readonly string connectionString;
-        //private readonly CartService cartService;
+        private readonly CartService cartService;
         
         public CartController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
-            //this.cartService = new CartService(new CartRepository(connectionString));
+            this.cartService = new CartService(new CartRepository(connectionString));
         }
         
         // GET api/cart
@@ -33,7 +33,14 @@ namespace flashy_things.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get()
         {
-            return this.Ok();
+            var result = cartService.Get();
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+
+            return this.Ok(result);
         }
     }
 }

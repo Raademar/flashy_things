@@ -22,21 +22,12 @@ namespace flashy_things.Controllers
     {
         private readonly string connectionString;
         private readonly ProductService productService;
-        public System.Web.SessionState.HttpSessionState Session { get; }
 
         
         public ProductController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
             this.productService = new ProductService(new ProductRepository(connectionString));
-            // This shall be connected to the latest cart + 1 or an already saved cart in session.
-            this.Session["activeCart"] = 1;
-        }
-        
-        protected void OnLoad( EventArgs e )
-        {
-            
-            int valueFromSession = Session["activeCart"];
         }
         
         // GET api/product

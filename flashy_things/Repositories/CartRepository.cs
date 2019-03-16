@@ -16,12 +16,14 @@ namespace flashy_things.Repositories
             this.ConnectionString = ConnectionString;
         }
 
-        public List<Product> Get()
-        {
-            
+        public List<CartItem> Get()
+        { 
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
-                return connection.Query<Product>("SELECT * FROM CartItem WHERE CartId = @id;", new { id }).ToList(); 
+                return connection.Query<CartItem>("SELECT CartItem.CartItemId, CartItem.CartId, CartItem.ProductId, Products.title, Products.image " +
+                                                  "FROM CartItem " +
+                                                  "LEFT JOIN Products ON Products.id = CartItem.ProductId" +
+                                                  "WHERE CartItem.CartId = 1;").ToList(); 
             }
         }
     }

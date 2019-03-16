@@ -13,7 +13,7 @@ namespace flashy_things.Services
             this.cartRepository = cartRepository;
         }
         
-        public List<Product> Get()
+        public List<CartItem> Get()
         {
             return this.cartRepository.Get();
         }
