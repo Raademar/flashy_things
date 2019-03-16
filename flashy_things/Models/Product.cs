@@ -4,7 +4,6 @@ namespace flashy_things.Models
 {
     public class Product
     {
-        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
@@ -16,5 +15,6 @@ namespace flashy_things.Models
         [Required]
         public int Stock { get; set; }
         public string DateAdded { get; set; }
+        public int Price { get; set; }
     }
 }

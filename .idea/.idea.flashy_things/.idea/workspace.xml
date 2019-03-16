@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3131f736-fcf5-4ebb-b73b-a05ccd94c995" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flashy_things/Controllers/CartController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashy_things/Models/Cart.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashy_things/Models/Order.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashy_things/Services/CartService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.flashy_things/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.flashy_things/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.flashy_things/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.flashy_things/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashy_things/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/Models/CartItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/Models/CartItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/Repositories/CartRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/Repositories/CartRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashy_things/Services/ProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/Services/ProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.dll" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/bin/Debug/netcoreapp2.2/flashy_things.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.dll" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/Debug/netcoreapp2.2/flashy_things.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/flashy_things.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/flashy_things.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/flashy_things.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/flashy_things.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/flashy_things.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/flashy_things.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashy_things/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/flashy_things/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,89 +56,51 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="flashy_things" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashy_things/appsettings.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="88" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashy_things/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <marker date="1552034032934" expanded="false" signature="6:255" ph="..." />
-                <marker date="1552034032934" expanded="true" signature="280:607" ph="{...}" />
-                <marker date="1552034032934" expanded="true" signature="307:605" ph="{...}" />
-                <marker date="1552034032934" expanded="true" signature="360:434" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashy_things/Startup.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding>
-                <marker date="1552034032944" expanded="false" signature="6:402" ph="..." />
-                <marker date="1552034032944" expanded="true" signature="427:1524" ph="{...}" />
-                <marker date="1552034032944" expanded="true" signature="454:1522" ph="{...}" />
-                <marker date="1552034032944" expanded="true" signature="513:576" ph="{...}" />
-                <marker date="1552034032944" expanded="true" signature="799:908" ph="{...}" />
-                <marker date="1552034032944" expanded="true" signature="1096:1516" ph="{...}" />
-                <marker date="1552034032944" expanded="true" signature="1143:1220" ph="{...}" />
-                <marker date="1552034032944" expanded="true" signature="1237:1440" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flashy_things/Controllers/ProductController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+            <state relative-caret-position="232">
+              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="50" />
               <folding>
-                <marker date="1552042422097" expanded="false" signature="6:368" ph="..." />
-                <marker date="1552042422097" expanded="true" signature="405:2619" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="511:2617" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="695:901" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="1131:1339" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="1230:1293" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="1582:1792" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="1683:1746" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="1966:2170" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="2060:2130" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="2409:2611" ph="{...}" />
-                <marker date="1552042422097" expanded="true" signature="2502:2570" ph="{...}" />
+                <marker date="1552744387622" expanded="false" signature="6:390" ph="..." />
+                <marker date="1552744387622" expanded="true" signature="428:3189" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="534:3187" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="719:925" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="1155:1363" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="1254:1317" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="1606:1816" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="1707:1770" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="1990:2194" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="2084:2154" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="2433:2635" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="2526:2594" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="2644:2698" ph="/* POST /api/product/id/addtocart ... */" />
+                <marker date="1552744387622" expanded="true" signature="2943:3181" ph="{...}" />
+                <marker date="1552744387622" expanded="true" signature="3057:3127" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashy_things/Services/ProductService.cs">
+        <entry file="file://$PROJECT_DIR$/flashy_things/Controllers/CartController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+            <state relative-caret-position="945">
+              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
               <folding>
-                <marker date="1552042310376" expanded="false" signature="6:95" ph="..." />
-                <marker date="1552042310376" expanded="true" signature="130:948" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="164:946" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="308:384" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="420:489" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="525:596" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="638:830" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="736:794" ph="{...}" />
-                <marker date="1552042310376" expanded="true" signature="866:940" ph="{...}" />
+                <marker date="1552750344866" expanded="false" signature="6:368" ph="..." />
+                <marker date="1552750344866" expanded="true" signature="405:1779" ph="{...}" />
+                <marker date="1552750344866" expanded="true" signature="508:1777" ph="{...}" />
+                <marker date="1552750344866" expanded="true" signature="683:880" ph="{...}" />
+                <marker date="1552750344866" expanded="true" signature="1107:1304" ph="{...}" />
+                <marker date="1552750344866" expanded="true" signature="1194:1257" ph="{...}" />
+                <marker date="1552750344866" expanded="true" signature="1564:1771" ph="{...}" />
+                <marker date="1552750344866" expanded="true" signature="1660:1730" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -122,36 +109,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
               <folding>
-                <marker date="1552042277818" expanded="true" signature="6:138" ph="..." />
-                <marker date="1552042277818" expanded="true" signature="176:2135" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="213:2133" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="391:465" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="501:716" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="591:706" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="752:999" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="842:989" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="1041:1713" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="1131:1703" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="1181:1449" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="1749:2127" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="1839:2117" ph="{...}" />
-                <marker date="1552042277818" expanded="true" signature="2003:2073" ph="{...}" />
+                <marker date="1552745933798" expanded="false" signature="6:233" ph="..." />
+                <marker date="1552745933798" expanded="true" signature="271:2716" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="325:2714" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="503:577" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="613:827" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="703:817" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="863:1109" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="953:1099" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="1151:1822" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="1241:1812" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="1291:1559" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="1858:2235" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="1948:2225" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="2111:2181" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="2293:2708" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="2383:2698" ph="{...}" />
+                <marker date="1552745933798" expanded="true" signature="2584:2654" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flashy_things/Models/Product.cs">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/flashy_things/Repositories/CartRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="276">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
-                <marker date="1552040599767" expanded="true" signature="76:507" ph="{...}" />
-                <marker date="1552040599767" expanded="true" signature="103:505" ph="{...}" />
+                <marker date="1552750448437" expanded="false" signature="6:138" ph="..." />
+                <marker date="1552750448437" expanded="true" signature="176:1347" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="210:1345" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="378:452" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="489:884" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="580:874" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="936:1339" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="1026:1316" ph="{...}" />
+                <marker date="1552750448437" expanded="true" signature="1202:1272" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -163,9 +160,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/flashy_things/Models/CartItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/flashy_things/Controllers/CartController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/flashy_things/Services/CartService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/flashy_things/Models/Order.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flashy_things/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flashy_things/Models/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flashy_things/Services/ProductService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/flashy_things/Repositories/CartRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/flashy_things/Models/Cart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flashy_things/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flashy_things/Controllers/ProductController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -178,17 +181,25 @@
         <option value="$PROJECT_DIR$/flashy_things/Models/Products.cs" />
         <option value="$PROJECT_DIR$/flashy_things/Services/ProductsService.cs" />
         <option value="$PROJECT_DIR$/flashy_things/Repositories/ProductsRepository.cs" />
-        <option value="$PROJECT_DIR$/flashy_things/appsettings.json" />
-        <option value="$PROJECT_DIR$/flashy_things/Models/Product.cs" />
-        <option value="$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs" />
         <option value="$PROJECT_DIR$/flashy_things/Services/ProductService.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Global.asax" />
         <option value="$PROJECT_DIR$/flashy_things/Controllers/ProductController.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/appsettings.json" />
+        <option value="$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Models/Product.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Models/CartItem.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Models/Order.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Models/Cart.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Services/CartService.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Controllers/CartController.cs" />
+        <option value="$PROJECT_DIR$/flashy_things/Repositories/CartRepository.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -196,8 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -210,11 +219,25 @@
               <item name="flashy_things" type="24d0babc:SolutionExplorerModelNode" />
               <item name="flashy_things" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="flashy_things" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="flashy_things" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="flashy_things" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="flashy_things" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,7 +248,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -265,11 +288,14 @@
       <workItem from="1551967263346" duration="3462000" />
       <workItem from="1552034111205" duration="1060000" />
       <workItem from="1552035313118" duration="7118000" />
+      <workItem from="1552393765371" duration="6374000" />
+      <workItem from="1552401094703" duration="5104000" />
+      <workItem from="1552744459061" duration="4955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11640000" />
+    <option name="totallyTimeSpent" value="29084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,22 +307,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15591398" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13166311" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Favorites" order="4" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29310346" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.032017075" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.49919224" weight="0.32897383" />
+      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.49919224" weight="0.32866043" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -304,7 +330,7 @@
       <window_info anchor="bottom" id="REST Client" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50080776" side_tool="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.27262932" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.27001068" />
       <window_info anchor="bottom" id="Performance Profiler" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -332,10 +358,40 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b6f55222-b402-47f7-88fa-7de915577fbf/console.sql" />
+    <entry file="file://$PROJECT_DIR$/flashy_things/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1551967269788" expanded="false" signature="6:255" ph="..." />
+            <marker date="1551967269788" expanded="true" signature="280:607" ph="{...}" />
+            <marker date="1551967269788" expanded="true" signature="307:605" ph="{...}" />
+            <marker date="1551967269788" expanded="true" signature="360:434" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <marker date="1551967269794" expanded="false" signature="6:402" ph="..." />
+            <marker date="1551967269794" expanded="true" signature="427:1524" ph="{...}" />
+            <marker date="1551967269794" expanded="true" signature="454:1522" ph="{...}" />
+            <marker date="1551967269794" expanded="true" signature="513:576" ph="{...}" />
+            <marker date="1551967269794" expanded="true" signature="799:908" ph="{...}" />
+            <marker date="1551967269794" expanded="true" signature="1096:1516" ph="{...}" />
+            <marker date="1551967269794" expanded="true" signature="1143:1220" ph="{...}" />
+            <marker date="1551967269794" expanded="true" signature="1237:1440" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flashy_things/Controllers/ValuesController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="-340">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <marker date="1551967269779" expanded="false" signature="6:128" ph="..." />
             <marker date="1551967269779" expanded="true" signature="165:973" ph="{...}" />
@@ -349,112 +405,175 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Global.asax" />
     <entry file="file://$PROJECT_DIR$/flashy_things/appsettings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" column="88" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashy_things/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <marker date="1552034032934" expanded="false" signature="6:255" ph="..." />
-            <marker date="1552034032934" expanded="true" signature="280:607" ph="{...}" />
-            <marker date="1552034032934" expanded="true" signature="307:605" ph="{...}" />
-            <marker date="1552034032934" expanded="true" signature="360:434" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flashy_things/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <marker date="1552034032944" expanded="false" signature="6:402" ph="..." />
-            <marker date="1552034032944" expanded="true" signature="427:1524" ph="{...}" />
-            <marker date="1552034032944" expanded="true" signature="454:1522" ph="{...}" />
-            <marker date="1552034032944" expanded="true" signature="513:576" ph="{...}" />
-            <marker date="1552034032944" expanded="true" signature="799:908" ph="{...}" />
-            <marker date="1552034032944" expanded="true" signature="1096:1516" ph="{...}" />
-            <marker date="1552034032944" expanded="true" signature="1143:1220" ph="{...}" />
-            <marker date="1552034032944" expanded="true" signature="1237:1440" ph="{...}" />
-          </folding>
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashy_things/Models/Product.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="437">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <marker date="1552040599767" expanded="true" signature="76:507" ph="{...}" />
-            <marker date="1552040599767" expanded="true" signature="103:505" ph="{...}" />
+            <marker date="1552747988507" expanded="true" signature="76:510" ph="{...}" />
+            <marker date="1552747988507" expanded="true" signature="103:508" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs">
+    <entry file="file://$PROJECT_DIR$/flashy_things/Models/CartItem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        <state relative-caret-position="115">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding>
-            <marker date="1552042277818" expanded="true" signature="6:138" ph="..." />
-            <marker date="1552042277818" expanded="true" signature="176:2135" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="213:2133" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="391:465" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="501:716" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="591:706" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="752:999" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="842:989" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="1041:1713" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="1131:1703" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="1181:1449" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="1749:2127" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="1839:2117" ph="{...}" />
-            <marker date="1552042277818" expanded="true" signature="2003:2073" ph="{...}" />
+            <marker date="1552748511644" expanded="true" signature="7:59" ph="..." />
+            <marker date="1552748511644" expanded="true" signature="91:384" ph="{...}" />
+            <marker date="1552748511644" expanded="true" signature="119:382" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Models/Cart.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <marker date="1552750039454" expanded="true" signature="30:238" ph="{...}" />
+            <marker date="1552750039454" expanded="true" signature="54:236" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Models/Order.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <marker date="1552749967960" expanded="true" signature="6:58" ph="..." />
+            <marker date="1552749967960" expanded="true" signature="90:300" ph="{...}" />
+            <marker date="1552749967960" expanded="true" signature="115:298" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashy_things/Services/ProductService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+        <state relative-caret-position="531">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
-            <marker date="1552042310376" expanded="false" signature="6:95" ph="..." />
-            <marker date="1552042310376" expanded="true" signature="130:948" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="164:946" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="308:384" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="420:489" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="525:596" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="638:830" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="736:794" ph="{...}" />
-            <marker date="1552042310376" expanded="true" signature="866:940" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="6:127" ph="..." />
+            <marker date="1552744387626" expanded="true" signature="162:1113" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="196:1111" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="340:416" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="452:521" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="557:628" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="670:862" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="768:826" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="898:972" ph="{...}" />
+            <marker date="1552744387626" expanded="true" signature="1022:1105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Services/CartService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <marker date="1552750180166" expanded="false" signature="6:95" ph="..." />
+            <marker date="1552750180166" expanded="true" signature="129:600" ph="{...}" />
+            <marker date="1552750180166" expanded="true" signature="160:598" ph="{...}" />
+            <marker date="1552750180166" expanded="true" signature="289:359" ph="{...}" />
+            <marker date="1552750180166" expanded="true" signature="404:470" ph="{...}" />
+            <marker date="1552750180166" expanded="true" signature="514:592" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Controllers/CartController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding>
+            <marker date="1552750344866" expanded="false" signature="6:368" ph="..." />
+            <marker date="1552750344866" expanded="true" signature="405:1779" ph="{...}" />
+            <marker date="1552750344866" expanded="true" signature="508:1777" ph="{...}" />
+            <marker date="1552750344866" expanded="true" signature="683:880" ph="{...}" />
+            <marker date="1552750344866" expanded="true" signature="1107:1304" ph="{...}" />
+            <marker date="1552750344866" expanded="true" signature="1194:1257" ph="{...}" />
+            <marker date="1552750344866" expanded="true" signature="1564:1771" ph="{...}" />
+            <marker date="1552750344866" expanded="true" signature="1660:1730" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flashy_things/Controllers/ProductController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+        <state relative-caret-position="232">
+          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="50" />
           <folding>
-            <marker date="1552042422097" expanded="false" signature="6:368" ph="..." />
-            <marker date="1552042422097" expanded="true" signature="405:2619" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="511:2617" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="695:901" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="1131:1339" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="1230:1293" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="1582:1792" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="1683:1746" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="1966:2170" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="2060:2130" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="2409:2611" ph="{...}" />
-            <marker date="1552042422097" expanded="true" signature="2502:2570" ph="{...}" />
+            <marker date="1552744387622" expanded="false" signature="6:390" ph="..." />
+            <marker date="1552744387622" expanded="true" signature="428:3189" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="534:3187" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="719:925" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="1155:1363" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="1254:1317" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="1606:1816" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="1707:1770" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="1990:2194" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="2084:2154" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="2433:2635" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="2526:2594" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="2644:2698" ph="/* POST /api/product/id/addtocart ... */" />
+            <marker date="1552744387622" expanded="true" signature="2943:3181" ph="{...}" />
+            <marker date="1552744387622" expanded="true" signature="3057:3127" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Repositories/ProductRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding>
+            <marker date="1552745933798" expanded="false" signature="6:233" ph="..." />
+            <marker date="1552745933798" expanded="true" signature="271:2716" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="325:2714" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="503:577" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="613:827" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="703:817" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="863:1109" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="953:1099" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="1151:1822" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="1241:1812" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="1291:1559" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="1858:2235" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="1948:2225" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="2111:2181" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="2293:2708" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="2383:2698" ph="{...}" />
+            <marker date="1552745933798" expanded="true" signature="2584:2654" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flashy_things/Repositories/CartRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <marker date="1552750448437" expanded="false" signature="6:138" ph="..." />
+            <marker date="1552750448437" expanded="true" signature="176:1347" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="210:1345" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="378:452" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="489:884" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="580:874" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="936:1339" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="1026:1316" ph="{...}" />
+            <marker date="1552750448437" expanded="true" signature="1202:1272" ph="{...}" />
           </folding>
         </state>
       </provider>

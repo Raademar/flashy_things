@@ -7,11 +7,15 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="CartController.cs" t="Include" />
           <e p="ProductController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="flashy_things.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="Cart.cs" t="Include" />
+          <e p="CartItem.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
           <e p="Product.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -26,9 +30,11 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Repositories" t="Include">
+          <e p="CartRepository.cs" t="Include" />
           <e p="ProductRepository.cs" t="Include" />
         </e>
         <e p="Services" t="Include">
+          <e p="CartService.cs" t="Include" />
           <e p="ProductService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />

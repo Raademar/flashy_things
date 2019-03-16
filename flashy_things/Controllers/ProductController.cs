@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Dapper;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
+
 
 namespace flashy_things.Controllers
 {
@@ -20,6 +22,7 @@ namespace flashy_things.Controllers
     {
         private readonly string connectionString;
         private readonly ProductService productService;
+
         
         public ProductController(IConfiguration configuration)
         {
@@ -84,6 +87,23 @@ namespace flashy_things.Controllers
             }
 
             return this.Ok();
+        }
+        // POST /api/product/id/addtocart
+        //[Route(")]
+        [HttpPost("~/api/product/{id}/addtocart")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult AddToCart([FromBody] CartItem cartItem)
+        {
+            var result = this.productService.AddToCart(cartItem);
+            
+            if (!result)
+            {
+                return this.BadRequest();
+            }
+
+            return this.Ok();
+            
         }
     }
 }

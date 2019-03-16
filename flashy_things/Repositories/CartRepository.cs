@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Dapper;
 using flashy_things.Models;
-using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 
 namespace flashy_things.Repositories
@@ -12,17 +11,34 @@ namespace flashy_things.Repositories
     {
         private readonly string ConnectionString;
         private readonly CartRepository cartRepository;
-        public List<CartItem> ShoppingCart;
-
 
         public CartRepository(string ConnectionString)
         {
             this.ConnectionString = ConnectionString;
         }
 
-        public void AddToCart(CartItem product)
+        public List<CartItem> Get()
+        { 
+            using (var connection = new MySqlConnection(this.ConnectionString))
+            {
+                return connection.Query<CartItem>("SELECT cartitem.CartItemId, cartitem.CartId, cartitem.ProductId, product.title, product.image, product.price FROM cartitem LEFT JOIN product ON product.Id = cartItem.ProductId WHERE cartitem.CartId = 1").ToList(); 
+            }
+        }
+        
+        public bool SubmitOrder(Cart cart)
         {
-            ShoppingCart.Add(product);
+            using (var connection = new MySqlConnection(this.ConnectionString))
+            {
+                var result = connection.Execute("INSERT INTO order (CartId, CustomerId) VALUES (@CartId, @CustomerId;)", cart);
+
+                if (result == 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            
         }
     }
 }
