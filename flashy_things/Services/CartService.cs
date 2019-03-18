@@ -13,14 +13,14 @@ namespace flashy_things.Services
             this.cartRepository = cartRepository;
         }
         
-        public List<CartItem> Get()
+        public Cart Get(int id)
         {
-            return this.cartRepository.Get();
+            return this.cartRepository.Get(id);
         }
 
-        public bool SubmitOrder(Cart cart)
+        public bool SubmitOrder(Cart cart, int customerId)
         {
-            return this.cartRepository.SubmitOrder(cart);
+            return this.cartRepository.SubmitOrder(cart, customerId);
         }
     }
 }

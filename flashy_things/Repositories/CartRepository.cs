@@ -17,19 +17,24 @@ namespace flashy_things.Repositories
             this.ConnectionString = ConnectionString;
         }
 
-        public List<CartItem> Get()
+        public Cart Get(int id)
         { 
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
-                return connection.Query<CartItem>("SELECT cartitem.CartItemId, cartitem.CartId, cartitem.ProductId, product.title, product.image, product.price FROM cartitem LEFT JOIN product ON product.Id = cartItem.ProductId WHERE cartitem.CartId = 1").ToList(); 
+                var cart = connection.QuerySingleOrDefault<Cart>("SELECT * FROM cart WHERE CartId = @id", new { id });
+                cart.Products = connection
+                    .Query<Product>(
+                        "SELECT * FROM cartitem ci INNER JOIN product p ON ci.ProductId = p.Id WHERE ci.CartId = @id",
+                        new {id}).ToList();
+                return cart;
             }
         }
         
-        public bool SubmitOrder(Cart cart)
+        public bool SubmitOrder(Cart cart, int CustomerId)
         {
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
-                var result = connection.Execute("INSERT INTO order (CartId, CustomerId) VALUES (@CartId, @CustomerId;)", cart);
+                var result = connection.Execute("INSERT INTO order (CartId, CustomerId) VALUES (@CartId, @CustomerId;)", new { cart, CustomerId });
 
                 if (result == 0)
                 {

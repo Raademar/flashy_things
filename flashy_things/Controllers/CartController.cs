@@ -27,13 +27,13 @@ namespace flashy_things.Controllers
             this.cartService = new CartService(new CartRepository(connectionString));
         }
         
-        // GET api/cart
-        [HttpGet]
-        [ProducesResponseType(typeof(List<Product>), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Get()
+        // GET api/cart/{id}
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Cart), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Cart), StatusCodes.Status404NotFound)]
+        public IActionResult Get(int id)
         {
-            var result = cartService.Get();
+            var result = cartService.Get(id);
 
             if (result == null)
             {
@@ -47,9 +47,9 @@ namespace flashy_things.Controllers
         [HttpPost("~/api/cart/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult SubmitOrder([FromBody] Cart cart)
+        public IActionResult SubmitOrder([FromBody] Cart cart, int customerId)
         {
-            var result = this.cartService.SubmitOrder(cart);
+            var result = this.cartService.SubmitOrder(cart, customerId);
             if (!result)
             {
                 return this.BadRequest();

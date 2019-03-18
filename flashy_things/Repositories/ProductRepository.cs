@@ -74,6 +74,13 @@ namespace flashy_things.Repositories
         {
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
+                var doesCartExist = connection
+                    .QuerySingleOrDefault("SELECT * FROM cart WHERE CartId = @CartId", new {cartItem.CartId});
+
+                if (doesCartExist == null)
+                {
+                    connection.Execute("INSERT INTO cart (CartId) VALUES (@CartId)", new { cartItem.CartId });
+                }
                 var response = connection.Execute("INSERT INTO cartitem (CartId, ProductId) VALUES (@CartId, @ProductId)", cartItem );
                 
                 if (response == 0)
