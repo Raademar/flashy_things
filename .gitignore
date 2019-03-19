@@ -210,6 +210,7 @@ project.lock.json
 # Output folder used by Webpack or other FE stuff
 **/node_modules/*
 **/wwwroot/*
+flashy_things_client/node_modules
 
 # SpecFlow specific
 *.feature.cs
