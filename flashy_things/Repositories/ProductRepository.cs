@@ -70,7 +70,7 @@ namespace flashy_things.Repositories
             }
         }
         
-        public bool AddToCart(CartItem cartItem)
+        public bool AddToCart(CartItem cartItem, int ProductId)
         {
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
@@ -81,7 +81,7 @@ namespace flashy_things.Repositories
                 {
                     connection.Execute("INSERT INTO cart (CartId) VALUES (@CartId)", new { cartItem.CartId });
                 }
-                var response = connection.Execute("INSERT INTO cartitem (CartId, ProductId) VALUES (@CartId, @ProductId)", cartItem );
+                var response = connection.Execute("INSERT INTO cartitem (CartId, ProductId) VALUES (@CartId, @ProductId)", new { cartItem.CartId, ProductId });
                 
                 if (response == 0)
                 {

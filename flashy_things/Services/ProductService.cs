@@ -42,9 +42,9 @@ namespace flashy_things.Services
             return this.productRepository.Delete(id);
         }
 
-        public bool AddToCart(CartItem cartItem)
+        public bool AddToCart(CartItem cartItem, int id)
         {
-            return this.productRepository.AddToCart(cartItem);
+            return this.productRepository.AddToCart(cartItem, id);
         }
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Net.Http.Headers;
 
 namespace flashy_things
 {
@@ -35,8 +36,9 @@ namespace flashy_things
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:3000")
-                            .AllowAnyHeader()
+                            .WithHeaders(HeaderNames.ContentType, "application/json")
                             .AllowAnyMethod();
+                        //.AllowCredentials();
                     });
 
             });
@@ -56,7 +58,7 @@ namespace flashy_things
             }
             
             app.UseCors(MyAllowSpecificOrigins);
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

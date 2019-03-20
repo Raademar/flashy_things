@@ -34,7 +34,7 @@ namespace flashy_things.Repositories
         {
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
-                var result = connection.Execute("INSERT INTO order (CartId, CustomerId) VALUES (@CartId, @CustomerId)", new { cart.CartId, CustomerId });
+                var result = connection.Execute("INSERT INTO submittedorders (CartId, CustomerId) VALUES (@CartId, @CustomerId)", new { cart.CartId, CustomerId });
 
                 if (result == 0)
                 {

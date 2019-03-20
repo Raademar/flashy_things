@@ -10,12 +10,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Dapper;
+using System.Web.Http.Cors;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI;
 
 
 namespace flashy_things.Controllers
 {
+    [EnableCors(origins: "http://localhost:3000/", headers: "Content-Type: application/json", methods: "*")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -90,19 +92,20 @@ namespace flashy_things.Controllers
         }
         // POST /api/product/id/addtocart
         //[Route(")]
+        [EnableCors(origins: "http://localhost:50164/", headers: "Content-Type: application/json", methods: "*")]
         [HttpPost("~/api/product/{id}/addtocart")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult AddToCart([FromBody] CartItem cartItem)
+        public IActionResult AddToCart([FromBody] CartItem cartItem, int id)
         {
-            var result = this.productService.AddToCart(cartItem);
+            var result = this.productService.AddToCart(cartItem, id);
             
             if (!result)
             {
                 return this.BadRequest();
             }
 
-            return this.Ok();
+            return this.Ok(cartItem);
             
         }
     }
