@@ -36,3 +36,9 @@ body {
 		transform: rotate(360deg);
 	}
 }
+
+.MuiModal-root-114 {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}

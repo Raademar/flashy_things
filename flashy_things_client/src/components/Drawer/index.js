@@ -40,7 +40,11 @@ class ShoppingCartDrawer extends React.Component {
 						</ListItem>
 					))}
 					<p>Total price: {this.props.totalPrice} SEK</p>
-					<Button variant="contained" color="primary">
+					<Button
+						variant="contained"
+						color="primary"
+						onClick={this.props.toggleModal}
+					>
 						Go to checkout
 						<ShoppingCart className={classes.rightIcon} />
 					</Button>

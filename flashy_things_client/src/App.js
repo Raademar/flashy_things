@@ -3,13 +3,15 @@ import './App.css'
 import Header from './components/Header'
 import ProductGrid from './components/ProductGrid'
 import ShoppingCartDrawer from './components/Drawer'
+import Modal from './components/Modal'
 
 class App extends Component {
 	state = {
 		products: [],
 		cart: { products: [] },
 		drawerOpen: false,
-		totalPrice: 0
+		totalPrice: 0,
+		modalOpen: false
 	}
 
 	componentDidMount() {
@@ -21,6 +23,10 @@ class App extends Component {
 			drawerOpen: !this.state.drawerOpen
 		})
 		this.fetchCart(2)
+	}
+
+	toggleModal = () => {
+		this.setState({ modalOpen: !this.state.modalOpen })
 	}
 
 	fetchCart = id => {
@@ -68,8 +74,14 @@ class App extends Component {
 					drawerOpen={this.state.drawerOpen}
 					cart={this.state.cart}
 					totalPrice={this.state.totalPrice}
+					modalOpen={this.state.modalOpen}
+					toggleModal={this.toggleModal}
 				/>
 				<ProductGrid products={this.state.products} />
+				<Modal
+					modalOpen={this.state.modalOpen}
+					toggleModal={this.toggleModal}
+				/>
 			</div>
 		)
 	}
