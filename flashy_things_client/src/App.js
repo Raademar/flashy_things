@@ -22,11 +22,12 @@ class App extends Component {
 		this.setState({
 			drawerOpen: !this.state.drawerOpen
 		})
-		this.fetchCart(2)
+		!this.state.drawerOpen && this.fetchCart(2)
 	}
 
 	toggleModal = () => {
 		this.setState({ modalOpen: !this.state.modalOpen })
+		//console.log(this.state.cart)
 	}
 
 	fetchCart = id => {
@@ -74,13 +75,13 @@ class App extends Component {
 					drawerOpen={this.state.drawerOpen}
 					cart={this.state.cart}
 					totalPrice={this.state.totalPrice}
-					modalOpen={this.state.modalOpen}
 					toggleModal={this.toggleModal}
 				/>
 				<ProductGrid products={this.state.products} />
 				<Modal
 					modalOpen={this.state.modalOpen}
 					toggleModal={this.toggleModal}
+					cart={this.state.cart}
 				/>
 			</div>
 		)

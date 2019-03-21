@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Modal from '@material-ui/core/Modal'
 import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import './modal.css'
 
 const styles = theme => ({
 	paper: {
@@ -13,12 +15,43 @@ const styles = theme => ({
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing.unit * 4,
 		outline: 'none'
+	},
+	textField: {
+		marginLeft: theme.spacing.unit,
+		marginRight: theme.spacing.unit,
+		width: 400
 	}
 })
 
 class SimpleModal extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			customerinfo: {
+				name: '',
+				street: '',
+				city: '',
+				zipCode: '',
+				telephone: '',
+				email: '',
+				currency: 'SEK'
+			}
+		}
+	}
+
+	handleChange = name => event => {
+		this.setState({ [name]: event.target.value })
+	}
+
+	componentDidMount() {
+		this.setState({
+			cart: this.props.cart
+		})
+	}
+
 	render() {
 		const { classes } = this.props
+		console.log(this.props)
 
 		return (
 			<div>
@@ -34,6 +67,65 @@ class SimpleModal extends React.Component {
 						<Typography variant="subtitle1" id="simple-modal-description">
 							Please fill in your delivery information.
 						</Typography>
+						{/* {this.props.cart.products.map((item, index) => (
+							<p>{item.title}</p>
+						))} */}
+						<div className="orderFields">
+							<TextField
+								id="name"
+								variant="outlined"
+								label="Name"
+								className={classes.textField}
+								value={this.state.name}
+								onChange={this.handleChange('name')}
+								margin="normal"
+							/>
+							<TextField
+								id="street"
+								variant="outlined"
+								label="Street"
+								className={classes.textField}
+								value={this.state.street}
+								onChange={this.handleChange('street')}
+								margin="normal"
+							/>
+							<TextField
+								id="city"
+								variant="outlined"
+								label="City"
+								className={classes.textField}
+								value={this.state.city}
+								onChange={this.handleChange('city')}
+								margin="normal"
+							/>
+							<TextField
+								id="zipCode"
+								variant="outlined"
+								label="Zip Code"
+								className={classes.textField}
+								value={this.state.zipCode}
+								onChange={this.handleChange('zipCode')}
+								margin="normal"
+							/>
+							<TextField
+								id="telephone"
+								variant="outlined"
+								label="Telephone"
+								className={classes.textField}
+								value={this.state.telephone}
+								onChange={this.handleChange('telephone')}
+								margin="normal"
+							/>
+							<TextField
+								id="email"
+								variant="outlined"
+								label="Email"
+								className={classes.textField}
+								value={this.state.email}
+								onChange={this.handleChange('email')}
+								margin="normal"
+							/>
+						</div>
 						<SimpleModalWrapped />
 						<Button
 							variant="contained"
