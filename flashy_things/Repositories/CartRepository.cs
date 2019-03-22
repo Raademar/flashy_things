@@ -36,12 +36,14 @@ namespace flashy_things.Repositories
             {
                 var result = connection.Execute(  
                 "INSERT INTO submittedorders (CartId, Name, Street, City, ZipCode, Telephone, Email) VALUES (@CartId, @Name, @Street, @City, @ZipCode, @Telephone, @Email)", order);
+                
 
                 if (result == 0)
                 {
                     return false;
                 }
 
+                connection.Execute("UPDATE cart SET CartCompleted = 1 WHERE CartId = @CartId", order.CartId);
                 return true;
             }
             

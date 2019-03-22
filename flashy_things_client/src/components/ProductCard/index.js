@@ -61,7 +61,7 @@ const ProductCard = props => {
 				<Button
 					size="small"
 					color="primary"
-					onClick={() => handleClick(2, props.id)}
+					onClick={() => handleClick(5, props.id)}
 				>
 					Add to cart
 				</Button>

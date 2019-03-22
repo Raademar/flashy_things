@@ -67,15 +67,23 @@ class SimpleModal extends React.Component {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(order)
+		}).then(res => {
+			res.status < 300 ? this.orderCompleted() : this.orderFailed()
 		})
-			.then(res => res.json())
-			.then(json => console.log(json))
+	}
+
+	orderCompleted = () => {
+		this.props.toggleModal()
+	}
+
+	orderFailed = () => {
+		console.log('order failed')
 	}
 
 	render() {
 		const { classes } = this.props
 		//console.log(JSON.parse(localStorage.getItem('cart')))
-		const cart = JSON.parse(localStorage.getItem('cart'))
+		const cart = JSON.parse(localStorage.getItem('cart')) || { products: [] }
 
 		return (
 			<div>

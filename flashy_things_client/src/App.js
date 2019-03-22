@@ -4,6 +4,7 @@ import Header from './components/Header'
 import ProductGrid from './components/ProductGrid'
 import ShoppingCartDrawer from './components/Drawer'
 import Modal from './components/Modal'
+import Snackbar from './components/Snackbar'
 
 class App extends Component {
 	state = {
@@ -11,7 +12,11 @@ class App extends Component {
 		cart: { products: [] },
 		drawerOpen: false,
 		totalPrice: 0,
-		modalOpen: false
+		modalOpen: false,
+		snackbar: {
+			isOpen: false,
+			type: ''
+		}
 	}
 
 	componentDidMount() {
@@ -22,7 +27,7 @@ class App extends Component {
 		this.setState({
 			drawerOpen: !this.state.drawerOpen
 		})
-		!this.state.drawerOpen && this.fetchCart(2)
+		!this.state.drawerOpen && this.fetchCart(5)
 	}
 
 	toggleModal = () => {
@@ -70,6 +75,8 @@ class App extends Component {
 				})
 			)
 	}
+
+	toggleSnackbar = () => {}
 
 	render() {
 		return (
