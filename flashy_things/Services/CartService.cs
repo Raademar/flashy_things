@@ -18,9 +18,9 @@ namespace flashy_things.Services
             return this.cartRepository.Get(id);
         }
 
-        public bool SubmitOrder(Cart cart, int customerId)
+        public bool SubmitOrder(Order order)
         {
-            return this.cartRepository.SubmitOrder(cart, customerId);
+            return this.cartRepository.SubmitOrder(order);
         }
     }
 }

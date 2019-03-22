@@ -47,9 +47,9 @@ namespace flashy_things.Controllers
         [HttpPost("~/api/cart/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult SubmitOrder([FromBody] Cart cart, int customerId)
+        public IActionResult SubmitOrder([FromBody] Order order)
         {
-            var result = this.cartService.SubmitOrder(cart, customerId);
+            var result = this.cartService.SubmitOrder(order);
             if (!result)
             {
                 return this.BadRequest();

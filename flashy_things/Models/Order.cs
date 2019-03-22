@@ -7,7 +7,11 @@ namespace flashy_things.Models
     {
         public int OrderId { get; set; }
         public int CartId { get; set; }
-        public int CustomerId { get; set; }
-        public string GuestName { get; set; }
+        public string Name { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string ZipCode { get; set; }
+        public string Telephone { get; set; }
+        public string Email { get; set; }
     }
 }

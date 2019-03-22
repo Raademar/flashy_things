@@ -41,6 +41,7 @@ class App extends Component {
 					},
 					() => {
 						this.updateTotal()
+						this.saveToLocalStorage()
 					}
 				)
 			)
@@ -53,6 +54,10 @@ class App extends Component {
 		this.setState({
 			totalPrice: totalPrice
 		})
+	}
+
+	saveToLocalStorage = () => {
+		localStorage.setItem('cart', JSON.stringify(this.state.cart))
 	}
 
 	fetchProducts = () => {

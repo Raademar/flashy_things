@@ -49,9 +49,33 @@ class SimpleModal extends React.Component {
 		})
 	}
 
+	submitOrder = id => {
+		const api = `https://localhost:5001/api/cart/${id}`
+		const order = {
+			cartId: id,
+			name: this.state.name,
+			street: this.state.street,
+			city: this.state.city,
+			zipCode: this.state.zipCode,
+			telephone: this.state.name,
+			email: this.state.email
+		}
+
+		fetch(api, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(order)
+		})
+			.then(res => res.json())
+			.then(json => console.log(json))
+	}
+
 	render() {
 		const { classes } = this.props
-		console.log(this.props)
+		//console.log(JSON.parse(localStorage.getItem('cart')))
+		const cart = JSON.parse(localStorage.getItem('cart'))
 
 		return (
 			<div>
@@ -67,9 +91,14 @@ class SimpleModal extends React.Component {
 						<Typography variant="subtitle1" id="simple-modal-description">
 							Please fill in your delivery information.
 						</Typography>
-						{/* {this.props.cart.products.map((item, index) => (
-							<p>{item.title}</p>
-						))} */}
+						<div className="cartOverview">
+							{cart.products.map(item => (
+								<div>
+									<img src={item.image} alt="" width="40px" height="auto" />
+									<p>{item.title}</p>
+								</div>
+							))}
+						</div>
 						<div className="orderFields">
 							<TextField
 								id="name"
@@ -137,7 +166,7 @@ class SimpleModal extends React.Component {
 						<Button
 							variant="contained"
 							color="primary"
-							onClick={this.props.toggleModal}
+							onClick={() => this.submitOrder(4)}
 						>
 							Submit order
 						</Button>

@@ -30,11 +30,12 @@ namespace flashy_things.Repositories
             }
         }
         
-        public bool SubmitOrder(Cart cart, int CustomerId)
+        public bool SubmitOrder(Order order)
         {
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
-                var result = connection.Execute("INSERT INTO submittedorders (CartId, CustomerId) VALUES (@CartId, @CustomerId)", new { cart.CartId, CustomerId });
+                var result = connection.Execute(  
+                "INSERT INTO submittedorders (CartId, Name, Street, City, ZipCode, Telephone, Email) VALUES (@CartId, @Name, @Street, @City, @ZipCode, @Telephone, @Email)", order);
 
                 if (result == 0)
                 {
