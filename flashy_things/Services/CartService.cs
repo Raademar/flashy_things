@@ -20,7 +20,9 @@ namespace flashy_things.Services
 
         public bool SubmitOrder(Order order)
         {
-            if (string.IsNullOrEmpty(order?.Name) ||
+            if (
+                order.CartId <= 0 ||
+                string.IsNullOrEmpty(order?.Name) ||
                 string.IsNullOrEmpty(order?.Street) ||
                 string.IsNullOrEmpty(order?.City) ||
                 string.IsNullOrEmpty(order?.ZipCode) ||

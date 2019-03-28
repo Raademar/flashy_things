@@ -1,42 +1,78 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import { SnackbarProvider, withSnackbar } from 'notistack'
+import Snackbar from '@material-ui/core/Snackbar'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
 
-class App extends React.Component {
-	handleClick = () => {
-		this.props.enqueueSnackbar('I love snacks.')
+const styles = theme => ({
+	close: {
+		padding: theme.spacing.unit / 2
+	}
+})
+
+class SimpleSnackbar extends React.Component {
+	state = {
+		open: false
 	}
 
-	handleClickVariant = variant => () => {
-		// variant could be success, error, warning or info
-		this.props.enqueueSnackbar('This is a warning message!', { variant })
+	handleClick = () => {
+		this.setState({ open: true })
+	}
+
+	handleClose = (event, reason) => {
+		if (reason === 'clickaway') {
+			return
+		}
+
+		this.setState({ open: false })
 	}
 
 	render() {
+		const { classes } = this.props
 		return (
-			<React.Fragment>
-				<Button onClick={this.handleClick}>Show snackbar</Button>
-				<Button onClick={this.handleClickVariant('warning')}>
-					Show warning snackbar
-				</Button>
-			</React.Fragment>
+			<div>
+				<Button onClick={this.handleClick}>Open simple snackbar</Button>
+				<Snackbar
+					anchorOrigin={{
+						vertical: 'bottom',
+						horizontal: 'left'
+					}}
+					open={this.state.open}
+					autoHideDuration={6000}
+					onClose={this.handleClose}
+					ContentProps={{
+						'aria-describedby': 'message-id'
+					}}
+					message={<span id="message-id">Note archived</span>}
+					action={[
+						<Button
+							key="undo"
+							color="secondary"
+							size="small"
+							onClick={this.handleClose}
+						>
+							UNDO
+						</Button>,
+						<IconButton
+							key="close"
+							aria-label="Close"
+							color="inherit"
+							className={classes.close}
+							onClick={this.handleClose}
+						>
+							<CloseIcon />
+						</IconButton>
+					]}
+				/>
+			</div>
 		)
 	}
 }
 
-App.propTypes = {
-	enqueueSnackbar: PropTypes.func.isRequired
+SimpleSnackbar.propTypes = {
+	classes: PropTypes.object.isRequired
 }
 
-const MyApp = withSnackbar(App)
-
-function IntegrationNotistack() {
-	return (
-		<SnackbarProvider maxSnack={3}>
-			<MyApp />
-		</SnackbarProvider>
-	)
-}
-
-export default IntegrationNotistack
+export default withStyles(styles)(SimpleSnackbar)

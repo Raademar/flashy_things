@@ -8,5 +8,6 @@ namespace flashy_things.Models
         public int CustomerId { get; set; }
         public int Price { get; set; }
         public List<Product> Products { get; set; }
+        public int CartCompleted { get; set; }
     }
 }

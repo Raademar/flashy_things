@@ -82,8 +82,8 @@ class SimpleModal extends React.Component {
 
 	render() {
 		const { classes } = this.props
-		//console.log(JSON.parse(localStorage.getItem('cart')))
 		const cart = JSON.parse(localStorage.getItem('cart')) || { products: [] }
+		const newCartId = JSON.parse(localStorage.getItem('currentCartId'))
 
 		return (
 			<div>
@@ -174,7 +174,7 @@ class SimpleModal extends React.Component {
 						<Button
 							variant="contained"
 							color="primary"
-							onClick={() => this.submitOrder(4)}
+							onClick={() => this.submitOrder(cart.cartId || newCartId)}
 						>
 							Submit order
 						</Button>

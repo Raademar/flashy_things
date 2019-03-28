@@ -10,6 +10,7 @@ class App extends Component {
 	state = {
 		products: [],
 		cart: { products: [] },
+		activeCart: '',
 		drawerOpen: false,
 		totalPrice: 0,
 		modalOpen: false,
@@ -24,10 +25,15 @@ class App extends Component {
 	}
 
 	toggleDrawer = id => {
-		this.setState({
-			drawerOpen: !this.state.drawerOpen
-		})
-		!this.state.drawerOpen && this.fetchCart(5)
+		this.setState(
+			{
+				activeCart: JSON.parse(localStorage.getItem('currentCartId')),
+				drawerOpen: !this.state.drawerOpen
+			},
+			() => {
+				this.fetchCart(this.state.activeCart)
+			}
+		)
 	}
 
 	toggleModal = () => {
@@ -45,8 +51,20 @@ class App extends Component {
 						cart: data
 					},
 					() => {
-						this.updateTotal()
-						this.saveToLocalStorage()
+						if (!localStorage.getItem('cart')) {
+							this.saveToLocalStorage()
+						}
+						if (data.cartCompleted === 1) {
+							const currentCartId = this.getCurrentCartFromLocalStorage()
+							localStorage.removeItem('cart')
+
+							localStorage.setItem(
+								'currentCartId',
+								JSON.stringify(currentCartId + 1)
+							)
+							return
+						}
+						this.state.cart.products.length > 0 && this.updateTotal()
 					}
 				)
 			)
@@ -63,6 +81,11 @@ class App extends Component {
 
 	saveToLocalStorage = () => {
 		localStorage.setItem('cart', JSON.stringify(this.state.cart))
+	}
+
+	getCurrentCartFromLocalStorage = () => {
+		const currentCart = JSON.parse(localStorage.getItem('cart'))
+		return currentCart.cartId
 	}
 
 	fetchProducts = () => {

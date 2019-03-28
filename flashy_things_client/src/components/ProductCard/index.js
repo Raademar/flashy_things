@@ -21,10 +21,14 @@ const styles = {
 const ProductCard = props => {
 	const { classes } = props
 
-	const handleClick = (cartId, productId) => {
+	const handleClick = productId => {
 		const api = `https://localhost:5001/api/product/${productId}/addtocart`
+		const currentCart = JSON.parse(localStorage.getItem('cart'))
+		const currentCartId = JSON.parse(localStorage.getItem('currentCartId'))
+		console.log(currentCart, currentCartId)
+
 		const data = {
-			CartId: cartId,
+			CartId: currentCart !== null ? currentCart.cartId : currentCartId,
 			ProductId: productId
 		}
 
@@ -61,7 +65,7 @@ const ProductCard = props => {
 				<Button
 					size="small"
 					color="primary"
-					onClick={() => handleClick(5, props.id)}
+					onClick={() => handleClick(props.id)}
 				>
 					Add to cart
 				</Button>

@@ -38,7 +38,7 @@ namespace flashy_things
                         builder.WithOrigins("http://localhost:3000")
                             .WithHeaders(HeaderNames.ContentType, "application/json")
                             .AllowAnyMethod();
-                        //.AllowCredentials();
+                            //.AllowCredentials();
                     });
 
             });
