@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/nunit.engine.netstandard.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.pdb" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="flashy_things" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -38,6 +41,23 @@
           <e p="ProductService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="flashy_things.IntegrationTests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="flashy_things.IntegrationTests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="flashy_things.IntegrationTests.AssemblyInfo.cs" t="Include" />
+              <e p="flashy_things.IntegrationTests.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="CartServiceTests.cs" t="Include" />
+          <e p="ProductServiceTests.cs" t="Include" />
+        </e>
+        <e p="UnitTest1.cs" t="Include" />
       </e>
       <e p="flashy_things.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

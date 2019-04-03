@@ -100,12 +100,13 @@ class SimpleModal extends React.Component {
 							Please fill in your delivery information.
 						</Typography>
 						<div className="cartOverview">
-							{cart.products.map(item => (
-								<div>
-									<img src={item.image} alt="" width="40px" height="auto" />
-									<p>{item.title}</p>
-								</div>
-							))}
+							{cart.products &&
+								cart.products.map(item => (
+									<div>
+										<img src={item.image} alt="" width="40px" height="auto" />
+										<p>{item.title}</p>
+									</div>
+								))}
 						</div>
 						<div className="orderFields">
 							<TextField

@@ -64,6 +64,8 @@ class App extends Component {
 							)
 							return
 						}
+						localStorage.removeItem('cart')
+						this.saveToLocalStorage()
 						this.state.cart.products.length > 0 && this.updateTotal()
 					}
 				)

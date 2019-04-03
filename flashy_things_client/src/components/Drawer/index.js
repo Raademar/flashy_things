@@ -32,13 +32,14 @@ class ShoppingCartDrawer extends React.Component {
 		const sideList = (
 			<div className={classes.list}>
 				<List>
-					{this.props.cart.products.map((item, index) => (
-						<ListItem key={index}>
-							<span className={classes.span}>1 x </span>
-							<img src={item.image} alt="" width="40px" height="auto" />
-							<p>{item.title}</p>
-						</ListItem>
-					))}
+					{this.props.cart.products &&
+						this.props.cart.products.map((item, index) => (
+							<ListItem key={index}>
+								<span className={classes.span}>1 x </span>
+								<img src={item.image} alt="" width="40px" height="auto" />
+								<p>{item.title}</p>
+							</ListItem>
+						))}
 					<p>Total price: {this.props.totalPrice} SEK</p>
 					<Button
 						variant="contained"
