@@ -58,7 +58,8 @@ class SimpleModal extends React.Component {
 			city: this.state.city,
 			zipCode: this.state.zipCode,
 			telephone: this.state.name,
-			email: this.state.email
+			email: this.state.email,
+			price: this.props.cart.price
 		}
 
 		fetch(api, {
@@ -107,6 +108,7 @@ class SimpleModal extends React.Component {
 										<p>{item.title}</p>
 									</div>
 								))}
+							<span>{cart.price} SEK</span>
 						</div>
 						<div className="orderFields">
 							<TextField

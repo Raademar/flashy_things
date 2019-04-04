@@ -6,9 +6,8 @@ namespace flashy_things.Services
 {
     public class CartService
     {
-        private readonly CartRepository cartRepository;
-        
-        public CartService(CartRepository cartRepository)
+        private readonly ICartRepository cartRepository;
+        public CartService(ICartRepository cartRepository)
         {
             this.cartRepository = cartRepository;
         }

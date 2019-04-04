@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace flashy_things.Repositories
 {
-    public class ProductRepository : ControllerBase
+    public class ProductRepository : IProductRepository
     {
         private readonly string ConnectionString;
         private readonly ProductRepository productRepository;

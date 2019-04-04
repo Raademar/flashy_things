@@ -13,5 +13,6 @@ namespace flashy_things.Models
         public string ZipCode { get; set; }
         public string Telephone { get; set; }
         public string Email { get; set; }
+        public int Price { get; set; }
     }
 }

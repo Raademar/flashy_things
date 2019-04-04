@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace flashy_things.Repositories
 {
-    public class CartRepository
+    public class CartRepository : ICartRepository
     {
         private readonly string ConnectionString;
         private readonly CartRepository cartRepository;
@@ -42,9 +42,11 @@ namespace flashy_things.Repositories
             using (var connection = new MySqlConnection(this.ConnectionString))
             {
                 var result = connection.Execute(  
-                "INSERT INTO submittedorders (CartId, Name, Street, City, ZipCode, Telephone, Email) VALUES (@CartId, @Name, @Street, @City, @ZipCode, @Telephone, @Email)", order);
+                "INSERT INTO submittedorders (CartId, Name, Street, City, ZipCode, Telephone, Email, Price) VALUES (@CartId, @Name, @Street, @City, @ZipCode, @Telephone, @Email, @Price)",
+                order);
                 
-                var resultOfUpdateCartCompletion = connection.Execute("UPDATE cart SET CartCompleted = 1 WHERE CartId = @CartId", new { order.CartId });
+                var resultOfUpdateCartCompletion =
+                    connection.Execute("UPDATE cart SET CartCompleted = 1 WHERE CartId = @CartId", new {order.CartId});
                 
                 if (result == 0 || resultOfUpdateCartCompletion == 0)
                 {
